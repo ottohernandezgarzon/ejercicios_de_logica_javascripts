@@ -1,15 +1,15 @@
 /************************* Reset *************************/
-:root{
+:root {
   --main-font: sans-serif;
   --font-size: 16px;
   --main-color: #f7df1e;
   --second-color: #222;
-  --main-modal-color: rgba(247,222,30,0.85);
-  --second-modal-color: rgba(34,34,34,0.85);
+  --main-modal-color: rgba(247, 222, 30, 0.85);
+  --second-modal-color: rgba(34, 34, 34, 0.85);
   --container-width: 1200px;
 }
 
-html{
+html {
   box-sizing: border-box;
   font-family: var(--main-font);
   font-size: var(font-size);
@@ -18,23 +18,23 @@ html{
 
 *,
 *:before,
-*:after{
+*:after {
   box-sizing: inherit;
 }
 
-body{
+body {
   margin: 0;
   overflow-x: hidden;
 }
 
-img{
+img {
   max-width: 100%;
   height: auto;
 }
 
 /************************* Menu hamburguesa *************************/
 
-.header{
+.header {
   position: sticky;
   top: 0;
   padding: 1rem;
@@ -42,12 +42,12 @@ img{
   color: var(--second-color);
 }
 
-.header h1{
+.header h1 {
   margin: 0;
   text-align: center;
 }
 
-.section{
+.section {
   padding: 2rem;
   padding-top: 4rem;
   padding-left: auto;
@@ -59,37 +59,39 @@ img{
   text-align: center;
 }
 
-.panel{
- position: fixed;
- z-index: 998;
- top: 0;
- bottom: 0;
- left: 0;
- right: 0;
- width: 100%;
- background-color: var(--second-modal-color);
- transition: transform 0.3s ease;
- transform: translate(0,-100%);
-}
-.panel.is-active{
-  transform: translate(0,0);
+.panel {
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: var(--second-modal-color);
+  transition: transform 0.3s ease;
+  transform: translate(0, -100%);
 }
 
-.panel-btn{
+.panel.is-active {
+  transform: translate(0, 0);
+}
+
+.panel-btn {
   position: fixed;
   z-index: 999;
   bottom: 1vh;
   right: 1vw;
   width: 4rem;
   height: 4rem;
-  border-radius:50%;
+  border-radius: 50%;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--main-color);
 }
-.menu{
+
+.menu {
   width: inherit;
   display: flex;
   flex-direction: column;
@@ -98,7 +100,7 @@ img{
   text-align: center;
 }
 
-.menu a{
+.menu a {
   padding: 2rem;
   width: inherit;
   display: block;
@@ -107,8 +109,25 @@ img{
   color: var(--main-color);
   transition: all 0.3s ease;
 }
-.menu a:hover{
+
+.menu a:hover {
   font-weight: bold;
   background-color: var(--main-modal-color);
   color: var(--second-modal-color);
+}
+
+/************************* Menu hamburguesa *************************/
+
+.stage{
+  display: flex;
+  min-height: 50vh;
+  background-color: var(--second-color);
+}
+
+.ball{
+  margin: auto;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: var(--main-color);
 }
