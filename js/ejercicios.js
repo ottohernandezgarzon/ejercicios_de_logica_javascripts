@@ -1,24 +1,24 @@
 /* 
 1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.*/
 
-function miFuncion(a){ 
-	
- console.log(a.length);
-	
+function miFuncion(a) {
+
+	console.log(a.length);
+
 }
 // miFuncion("Hola mundo");
- 
+
 /*
 2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".*/
 
-function cadenaSlice(a, n){
+function cadenaSlice(a, n) {
 	console.log(a.substr(0, n));
 }
 // cadenaSlice("Hola Mundo", 4 );
 /*
  3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', '') devolverá ['hola', 'que', 'tal']. 
  */
-function cadenaArray(a, c){
+function cadenaArray(a, c) {
 	console.log(a.split(c));
 }
 // cadenaArray('Hola que tal', ' ');
@@ -26,15 +26,15 @@ function cadenaArray(a, c){
 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo. 
 */
 
-function cadenaRepite(a, n){
+function cadenaRepite(a, n) {
 	console.log(a.repeat(n));
 }
 // cadenaRepite('Hola Mundo\t', 3);
 /*
 5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
 */
-function cadenaInvertida(a){
-	a=a.split('').reverse().join('');
+function cadenaInvertida(a) {
+	a = a.split('').reverse().join('');
 	console.log(a);
 }
 // cadenaInvertida("Hola Mundo");
@@ -42,7 +42,7 @@ function cadenaInvertida(a){
 
 6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion	("hola mundo adios mundo", "mundo") devolverá 2.*/
 
- /* * Mi solucion
+/* * Mi solucion
 function cadenaValorBusqueda(a, c){ 
 	for(let i=0; i<=a.split().length; i++){
 		let  b=0;
@@ -54,17 +54,17 @@ function cadenaValorBusqueda(a, c){
 	cadenaValorBusqueda("hola mundo adios mundo", "mundo"); */
 //  * soluccion de @JhonMircha
 
-const textoEnCadena=(cadena = "", texto = "")=>{
+const textoEnCadena = (cadena = "", texto = "") => {
 	if (!cadena) return console.warn("No ingresaste texto largo");
 
 	if (!texto) return console.warn("No ingresaste la palabra a evaluar");
 
 	let i = 0,
-			contador = 0; 
-	
+		contador = 0;
+
 	while (i !== -1) {
 		i = cadena.indexOf(texto, i);
-		if(i !== -1){
+		if (i !== -1) {
 			i++;
 			contador++;
 		}
@@ -77,61 +77,61 @@ const textoEnCadena=(cadena = "", texto = "")=>{
 
 /*
 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true. */
-function cadenaPalindromo(a){
-	a= a.toLowerCase();
-	if(a.split('').reverse().join('') == a ){
-			return console.log(true)
-		}
-		console.log(false, a.split('').reverse().join(''));
+function cadenaPalindromo(a) {
+	a = a.toLowerCase();
+	if (a.split('').reverse().join('') == a) {
+		return console.log(true)
 	}
-	// cadenaPalindromo('Salas');
+	console.log(false, a.split('').reverse().join(''));
+}
+// cadenaPalindromo('Salas');
 
 /*
 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá "1, 2, 3, 4 y 5.*/
 
-function cadenaEliminado(a, c){
+function cadenaEliminado(a, c) {
 	console.log(a.split(c).join(''));
-	}
-	
+}
+
 // cadenaEliminado("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz");
 /*
 9)Programa una función que obtenga un numero aleatorio entre 501 y 600.*/
 
-const numeroAleatorio = ()=> 
-	console.info(Math.round((Math.random() * 100) +500));
+const numeroAleatorio = () =>
+	console.info(Math.round((Math.random() * 100) + 500));
 // numeroAleatorio();
- /*
+/*
 10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion (2002) devolverá true.*/
 
-const numeroEvaluar = (numero = undefined) => { 
+const numeroEvaluar = (numero = undefined) => {
 	if (!numero) return console.warn('No ingresaste un numero para evaluar')
-	let invertido =numero.toString().split('').reverse().join(''),
+	let invertido = numero.toString().split('').reverse().join(''),
 		numeroInvertido = parseInt(invertido);
-	
-	if(numeroInvertido != numero)
-		return console.info(`El numero ${numero} no es capicúa, es diferenta al numero ${numeroInvertido}`) 
-		
-	return console.info(`El numero ${numero} si es capicúa, es igual al numero ${numeroInvertido}`) 
+
+	if (numeroInvertido != numero)
+		return console.info(`El numero ${numero} no es capicúa, es diferenta al numero ${numeroInvertido}`)
+
+	return console.info(`El numero ${numero} si es capicúa, es igual al numero ${numeroInvertido}`)
 }
 //  
-	// numeroEvaluar();
-	// numeroEvaluar(2004);
-	// numeroEvaluar(2002);
+// numeroEvaluar();
+// numeroEvaluar(2004);
+// numeroEvaluar(2002);
 /*
 11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.*/
 
 const numeroFactorial = (numero = undefined) => {
-	if ( numero === undefined ) return console.warn('No ingresaste un número');
-	 if ( typeof numero !== "number" ) return console.error(` Este valor "${numero}", no  es un numero`);
-	if ( numero ===0 ) return console.error("El numero no puede ser 0");
-	if( Math.sign(numero) ===-1) return console.error( "El numero no puede ser negativo");
-	
-	let factorial=1;
-	
-	for(let i=numero; i > 1; i--){
-		factorial*=i;
+	if (numero === undefined) return console.warn('No ingresaste un número');
+	if (typeof numero !== "number") return console.error(` Este valor "${numero}", no  es un numero`);
+	if (numero === 0) return console.error("El numero no puede ser 0");
+	if (Math.sign(numero) === -1) return console.error("El numero no puede ser negativo");
+
+	let factorial = 1;
+
+	for (let i = numero; i > 1; i--) {
+		factorial *= i;
 	}
-	
+
 	return console.info(`El factorial de ${numero} es ${factorial} `);
 }
 
@@ -145,22 +145,22 @@ const numeroFactorial = (numero = undefined) => {
 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
 */
 
-const numeroPrimo = ( numero = undefined)=>  {
-	if(numero === undefined) return console.warn('No ingresaste un numero');
-	if(typeof numero !== "number") return console.error(`Este valor "${numero}" no es un numero`);
-	if( numero === 0) return console.error('El núnmero no puede ser "0"');
-	if( numero === 1) return console.error('El núnmero no puede ser "1"');
-	let divisible= false;
-	for(let i =2;i<numero; i++ ){
-		if ((numero % i)===0) {
-			divisible=true;
+const numeroPrimo = (numero = undefined) => {
+	if (numero === undefined) return console.warn('No ingresaste un numero');
+	if (typeof numero !== "number") return console.error(`Este valor "${numero}" no es un numero`);
+	if (numero === 0) return console.error('El núnmero no puede ser "0"');
+	if (numero === 1) return console.error('El núnmero no puede ser "1"');
+	let divisible = false;
+	for (let i = 2; i < numero; i++) {
+		if ((numero % i) === 0) {
+			divisible = true;
 			break
 		}
 	}
 
-	return (divisible)
-	? console.log(`El numero ${numero} no es un numero primo`)
-	: console.log(`El numero ${numero} si es un numero primeo`);
+	return (divisible) ?
+		console.log(`El numero ${numero} no es un numero primo`) :
+		console.log(`El numero ${numero} si es un numero primeo`);
 }
 // numeroPrimo();
 // numeroPrimo(",");
@@ -172,38 +172,38 @@ const numeroPrimo = ( numero = undefined)=>  {
 /*'
 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
 */
-const numeroParImpar = (numero = undefined) =>{
-	if(numero ===undefined) return console.warn( "No ingresaste un numero" );
-	
-	if( typeof numero !== "number" ) return console.error(`Este valor ${numero} no es un número`);
-	
+const numeroParImpar = (numero = undefined) => {
+	if (numero === undefined) return console.warn("No ingresaste un numero");
+
+	if (typeof numero !== "number") return console.error(`Este valor ${numero} no es un número`);
+
 	let residuo = numero % 2;
-	if( residuo !== 0 ) return console.info( 'Es un nùmero impar');
+	if (residuo !== 0) return console.info('Es un nùmero impar');
 	return console.info('Es un nùmero par')
 }
-  
-  // numeroParImpar();
-  // numeroParImpar("h");
-  // numeroParImpar(4);
-  // numeroParImpar(29);
+
+// numeroParImpar();
+// numeroParImpar("h");
+// numeroParImpar(4);
+// numeroParImpar(29);
 /*
 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
  */
- 
- const fahrenheit = (numero = undefined, temperatura ="") => {
- 	if( numero === undefined) return console.warn("No ingresaste un nùmero" );
- 	if (temperatura==="") return console.warn("No ingresaste el tipo de temperatura"); 
- 	if(temperatura === "F" || temperatura === "f") {
- 		let f = (numero*9/5)+32;
- 		return console.info(`La temperatura de "${numero}° C"  equivale a "${f}° F" `);
-	}
-	
-		if(temperatura === "C" || temperatura === "c") {
-			let c = (numero-32)*5/9
-			return console.info(`La temperatura de "${numero}° F" equivale a "${c}° C"`);
-	 }
 
-	if(!(temperatura !== "F" || temperatura!== "f") || (temperatura !== "C" || temperatura !== "c")) return console.error(`El tipo temperatura  "${temperatura}" no corresponde por favor verifique, solo puedes ingresar Fahrenheit o Celsius`); 
+const fahrenheit = (numero = undefined, temperatura = "") => {
+	if (numero === undefined) return console.warn("No ingresaste un nùmero");
+	if (temperatura === "") return console.warn("No ingresaste el tipo de temperatura");
+	if (temperatura === "F" || temperatura === "f") {
+		let f = (numero * 9 / 5) + 32;
+		return console.info(`La temperatura de "${numero}° C"  equivale a "${f}° F" `);
+	}
+
+	if (temperatura === "C" || temperatura === "c") {
+		let c = (numero - 32) * 5 / 9
+		return console.info(`La temperatura de "${numero}° F" equivale a "${c}° C"`);
+	}
+
+	if (!(temperatura !== "F" || temperatura !== "f") || (temperatura !== "C" || temperatura !== "c")) return console.error(`El tipo temperatura  "${temperatura}" no corresponde por favor verifique, solo puedes ingresar Fahrenheit o Celsius`);
 };
 // fahrenheit();
 // fahrenheit(0);
@@ -218,24 +218,24 @@ const numeroParImpar = (numero = undefined) =>{
 15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.
  */
 
-const convertirBinarioDecimal = (numero= undefined, base = undefined)=>{
-	if ( numero === undefined ) return console.warn(`No ingresaste un numero a convertir`);
+const convertirBinarioDecimal = (numero = undefined, base = undefined) => {
+	if (numero === undefined) return console.warn(`No ingresaste un numero a convertir`);
 
 	if (typeof numero !== "number") return console.error(`Este valor ${numero} ingresado, no es número`);
-	
-	if ( base === undefined ) return console.warn(`No ingresaste un base a convertir`);
-	
+
+	if (base === undefined) return console.warn(`No ingresaste un base a convertir`);
+
 	if (typeof base !== "number") return console.error(`Este valor ${base} ingresado, no es número`);
 
-	if( base === 2){
-		
+	if (base === 2) {
+
 		return console.info(`${numero} base ${base} = ${parseInt(numero, base)} base 10`)
 
-	}else if ( base === 10) {
-		
+	} else if (base === 10) {
+
 		return console.info(`${numero} base ${base} = ${(numero.toString(2))} base 2`)
 
-	}else{
+	} else {
 		console.error(`El tipo base a convertir no es valida`);
 	}
 }
@@ -250,21 +250,21 @@ const convertirBinarioDecimal = (numero= undefined, base = undefined)=>{
 16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
  */
 
-const aplicarDescuento = (monto = undefined, descuento = 0)=>{
-	
-	if ( monto === undefined ) return console.warn(`No ingresaste un monto`);
-	
-	if ( typeof monto !== "number") return console.error(`Este valor ${monto} ingresado, No es numero`);
-	
-	if ( Math.sign(monto) === -1 ) return console.error(`El monto no puede ser negativo`);
-	
-	if ( typeof descuento !== "number") return console.error(`Este valor ${descuento} ingresado, No es numero`);
-	
-	if ( Math.sign(descuento) === -1 ) return console.error(`El descuento no puede ser negativo`);
+const aplicarDescuento = (monto = undefined, descuento = 0) => {
+
+	if (monto === undefined) return console.warn(`No ingresaste un monto`);
+
+	if (typeof monto !== "number") return console.error(`Este valor ${monto} ingresado, No es numero`);
+
+	if (Math.sign(monto) === -1) return console.error(`El monto no puede ser negativo`);
+
+	if (typeof descuento !== "number") return console.error(`Este valor ${descuento} ingresado, No es numero`);
+
+	if (Math.sign(descuento) === -1) return console.error(`El descuento no puede ser negativo`);
 
 	return console.info(`${monto} - ${descuento}% = ${monto - ((monto * descuento )/ 100)}`);
-} 
- 
+}
+
 // aplicarDescuento();
 // aplicarDescuento("200");
 // aplicarDescuento(0);
@@ -277,20 +277,20 @@ const aplicarDescuento = (monto = undefined, descuento = 0)=>{
 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
  */
 
-const calcularAnios = (fecha = undefined)=>{
-	if ( fecha === undefined ) return console.warn(`No ingresaste la fecha`);
+const calcularAnios = (fecha = undefined) => {
+	if (fecha === undefined) return console.warn(`No ingresaste la fecha`);
 
-	if ( !(fecha instanceof Date)) return console.error(`Este valor ${fecha} ingresado, no es valido`);
-	
-	let hoyMenosFecha = new Date().getTime()-fecha.getTime(),
+	if (!(fecha instanceof Date)) return console.error(`Este valor ${fecha} ingresado, no es valido`);
+
+	let hoyMenosFecha = new Date().getTime() - fecha.getTime(),
 		aniosEnMilisegunos = 1000 * 60 * 60 * 24 * 365,
 		aniosHumanos = Math.floor(hoyMenosFecha / aniosEnMilisegunos);
 
-	return (Math.sign(aniosHumanos) === -1)
-	?console.info(`Falta ${Math.abs(aniosHumanos)} años para el ${fecha.getFullYear()}.`)
-	:(Math.sign(aniosHumanos) === 1 ) 
-		? console.info(`Ha pasado ${aniosHumanos} años, desde ${fecha.getFullYear()}`)
-		: console.info(`Estamos en le actual ${fecha.getFullYear()}`)
+	return (Math.sign(aniosHumanos) === -1) ?
+		console.info(`Falta ${Math.abs(aniosHumanos)} años para el ${fecha.getFullYear()}.`) :
+		(Math.sign(aniosHumanos) === 1) ?
+		console.info(`Ha pasado ${aniosHumanos} años, desde ${fecha.getFullYear()}`) :
+		console.info(`Estamos en le actual ${fecha.getFullYear()}`)
 }
 // calcularAnios();
 // calcularAnios({});
@@ -301,16 +301,16 @@ const calcularAnios = (fecha = undefined)=>{
 
 /* 18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
  */
-const contarLetras =( cadena = "" ) =>{
+const contarLetras = (cadena = "") => {
 	if (cadena === "") return console.warn(`No ingresaste una cadena de texto`);
 	if (typeof cadena !== "string") return console.error(`Este valor "${cadena}"  ingresado , no es una cadena de texto`);
 	let vocal = 0,
 		consonante = 0;
-		for (const letra of cadena) {
-			if (/[AaÁáEeÉéIiÍíOoÓóUuÚúÜü]/.test(letra)) vocal++;
-			if (/[BbCcDdFfGgHhJjKkLlMmNnÑñPpQqSsTtVvWwXxYyZz]/.test(letra)) consonante++
-		}
-		return console.info(`Texto ingresado : ${cadena}, cantidad de vocales : ${vocal} y cantidad de consonantes : ${consonante}` )
+	for (const letra of cadena) {
+		if (/[AaÁáEeÉéIiÍíOoÓóUuÚúÜü]/.test(letra)) vocal++;
+		if (/[BbCcDdFfGgHhJjKkLlMmNnÑñPpQqSsTtVvWwXxYyZz]/.test(letra)) consonante++
+	}
+	return console.info(`Texto ingresado : ${cadena}, cantidad de vocales : ${vocal} y cantidad de consonantes : ${consonante}`)
 }
 // contarLetras();
 // contarLetras(3);
@@ -319,31 +319,31 @@ const contarLetras =( cadena = "" ) =>{
 /* 19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
  */
 
-const validarNombre = (nombre = "")=> {
-	if(!nombre) return console.warn("No ingresaste un nombre");
-	if(typeof nombre !== "string") return console.error(`Este valor "${nombre}" ingresaso, no es una cadena de texto`);
+const validarNombre = (nombre = "") => {
+	if (!nombre) return console.warn("No ingresaste un nombre");
+	if (typeof nombre !== "string") return console.error(`Este valor "${nombre}" ingresaso, no es una cadena de texto`);
 
 	let expReg = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/g.test(nombre);
 
-	return (expReg)
-	?console.info(`"${nombre}", es un nombre válido`)
-	:console.info(`"${nombre}", no es un nombre válido`);
+	return (expReg) ?
+		console.info(`"${nombre}", es un nombre válido`) :
+		console.info(`"${nombre}", no es un nombre válido`);
 }
 // validarNombre();
 // validarNombre(9);
 // validarNombre("Otoniel Hernández Garzón");
 // validarNombre("Otoniel Hernández Garzón, 12");
 /* 20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.
-*/
-const validarEmail = (email = "")=> {
-	if(!email) return console.warn("No ingresaste un email");
-	if(typeof email !== "string") return console.error(`Este valor "${email}" ingresaso, no es una cadena de texto`);
+ */
+const validarEmail = (email = "") => {
+	if (!email) return console.warn("No ingresaste un email");
+	if (typeof email !== "string") return console.error(`Este valor "${email}" ingresaso, no es una cadena de texto`);
 
 	let expReg = /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i.test(email);
 
-	return (expReg)
-	?console.info(`"${email}", es un email válido`)
-	:console.info(`"${email}", no es un email válido`);
+	return (expReg) ?
+		console.info(`"${email}", es un email válido`) :
+		console.info(`"${email}", no es un email válido`);
 }
 // validarEmail();
 // validarEmail(9);
@@ -354,13 +354,13 @@ const validarEmail = (email = "")=> {
 /* 21) Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].
  */
 
-const devolverCuadrados = ( array = undefined)=>{
-	if(array === undefined) return console.warn("No ingresaste un arreglo de numeros");
+const devolverCuadrados = (array = undefined) => {
+	if (array === undefined) return console.warn("No ingresaste un arreglo de numeros");
 	if (!(array instanceof Array)) return console.error(`Este valor "${array}" ingresado, no es un arreglo de numeros`);
-	if(array.length === 0) return console.error("El arreglo esta vacio");
+	if (array.length === 0) return console.error("El arreglo esta vacio");
 	for (const numero of array) {
-		if(typeof numero !== "number") return console.error(`Este valor "${numero}" ingresado, no es un número`);
-	} 
+		if (typeof numero !== "number") return console.error(`Este valor "${numero}" ingresado, no es un número`);
+	}
 
 	const newArray = array.map(numero => numero * numero);
 
@@ -377,14 +377,14 @@ const devolverCuadrados = ( array = undefined)=>{
 /* 22) Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].
  */
 
-const arrayMinMax = (array = undefined)=>{
-	if(array === undefined) return console.warn("No ingresaste un arreglo de numeros");
+const arrayMinMax = (array = undefined) => {
+	if (array === undefined) return console.warn("No ingresaste un arreglo de numeros");
 
 	if (!(array instanceof Array)) return console.error(`Este valor "${array}" ingresado, no es un arreglo de numeros`);
-	
-	if(array.length === 0) return console.error("El arreglo esta vacio");
+
+	if (array.length === 0) return console.error("El arreglo esta vacio");
 	for (const numero of array) {
-		if(typeof numero !== "number") return console.error(`Este valor "${numero}" ingresado, no es un número`);
+		if (typeof numero !== "number") return console.error(`Este valor "${numero}" ingresado, no es un número`);
 	}
 
 	return console.info(`Arreglo original: "[${array}]",\nValor mayor:  "[${Math.max(...array)}]",\nValor minimo:  "[${Math.min(...array)}]"`)
@@ -396,34 +396,34 @@ const arrayMinMax = (array = undefined)=>{
 // arrayMinMax([1, 4, 5, 99, -60]);
 /* 23) Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}.
  */
-const separarParesImpares=(array=undefined)=>{
-	if(array === undefined) return console.warn("No ingresaste un arreglo de numeros");
+const separarParesImpares = (array = undefined) => {
+	if (array === undefined) return console.warn("No ingresaste un arreglo de numeros");
 
 	if (!(array instanceof Array)) return console.error(`Este valor "${array}" ingresado, no es un arreglo de numeros`);
-	
-	if(array.length === 0) return console.error("El arreglo esta vacio");
+
+	if (array.length === 0) return console.error("El arreglo esta vacio");
 	for (const numero of array) {
-		if(typeof numero !== "number") return console.error(`Este valor "${numero}" ingresado, no es un número`);
+		if (typeof numero !== "number") return console.error(`Este valor "${numero}" ingresado, no es un número`);
 	}
 
 	return console.info({
-		pares:array.filter(numero => numero % 2 === 0),
-		pares:array.filter(numero => numero % 2 === 1)
+		pares: array.filter(numero => numero % 2 === 0),
+		pares: array.filter(numero => numero % 2 === 1)
 	});
 }
 
 /* 24) Programa una función que dado un arreglo de números devuelva un objeto con dos arreglos, el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendiente, pe. miFuncion([7, 5,7,8,6]) devolverá { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }.
  */
 
-const ordenarArreglo =(array=undefined)=>{
-	if(array === undefined) return console.warn("No ingresaste un arreglo de numeros");
+const ordenarArreglo = (array = undefined) => {
+	if (array === undefined) return console.warn("No ingresaste un arreglo de numeros");
 
 	if (!(array instanceof Array)) return console.error(`Este valor "${array}" ingresado, no es un arreglo de numeros`);
-	
-	if(array.length === 0) return console.error("El arreglo esta vacio");
+
+	if (array.length === 0) return console.error("El arreglo esta vacio");
 
 	for (const numero of array) {
-		if(typeof numero !== "number") return console.error(`Este valor "${numero}" ingresado, no es un número`);
+		if (typeof numero !== "number") return console.error(`Este valor "${numero}" ingresado, no es un número`);
 	}
 	return console.info({
 		array,
@@ -439,21 +439,21 @@ const ordenarArreglo =(array=undefined)=>{
 /* 25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].
  */
 
-const quitarDublicados = (array =undefined)=>{
+const quitarDublicados = (array = undefined) => {
 
-	if(array === undefined) return console.warn("No ingresaste un arreglo de numeros");
+	if (array === undefined) return console.warn("No ingresaste un arreglo de numeros");
 
 	if (!(array instanceof Array)) return console.error(`Este valor "${array}" ingresado, no es un arreglo de numeros`);
-	
-	if(array.length === 0) return console.error("El arreglo esta vacio");
-	
+
+	if (array.length === 0) return console.error("El arreglo esta vacio");
+
 	/* return console.info({
 		original	: array,
 		sinDuplicados: array.filter((value, index, self) => self.indexOf(value) === (index))
 	}) */
-	
+
 	return console.info({
-		original	: array,
+		original: array,
 		sinDuplicados: [...new Set(array)]
 	})
 }
@@ -467,22 +467,22 @@ const quitarDublicados = (array =undefined)=>{
 /* 26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.
  */
 
-const promedio = (array = undefined) =>{
-	if(array === undefined) return console.warn("No ingresaste un arreglo de numeros");
+const promedio = (array = undefined) => {
+	if (array === undefined) return console.warn("No ingresaste un arreglo de numeros");
 
 	if (!(array instanceof Array)) return console.error(`Este valor "${array}" ingresado, no es un arreglo de numeros`);
-	
-	if(array.length === 0) return console.error("El arreglo esta vacio");
+
+	if (array.length === 0) return console.error("El arreglo esta vacio");
 
 	for (const numero of array) {
-		if(typeof numero !== "number") return console.error(`Este valor "${numero}" ingresado, no es un número`);
+		if (typeof numero !== "number") return console.error(`Este valor "${numero}" ingresado, no es un número`);
 	}
 	return console.info(
-		array.reduce((total, numero, index, array)=>{
-			total+=numero;
-			if (index===array.length-1) {
+		array.reduce((total, numero, index, array) => {
+			total += numero;
+			if (index === array.length - 1) {
 				return `El promedio de ${array.join("+")} es ${total/array.length}`
-			}else{
+			} else {
 				return total;
 			}
 		})
