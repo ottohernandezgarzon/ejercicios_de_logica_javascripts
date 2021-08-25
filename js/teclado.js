@@ -7,8 +7,8 @@ export function moveBall(e, ball, stage) {
     $stage = d.querySelector(stage),
     limitBall = $ball.getBoundingClientRect(),
     limitStage = $stage.getBoundingClientRect();
-  console.log(e.keyCode);
-  console.log(e.key);
+  // console.log(e.keyCode);
+  // console.log(e.key);
 
   switch (e.keyCode) {
     case 37:
@@ -42,12 +42,12 @@ export function moveBall(e, ball, stage) {
 }
 
 export function shortcuts(e) {
-  console.log(e.type);
-  console.log(e.key);
-  console.log(e.keyCode);
-  console.log(e.ctrlKey);
-  console.log(e.altKey);
-  console.log(e);
+  // console.log(e.type);
+  // console.log(e.key);
+  // console.log(e.keyCode);
+  // console.log(e.ctrlKey);
+  // console.log(e.altKey);
+  // console.log(e);
 
   if (e.key === "a" && e.altKey) {
     alert("Haz lanzado una alerta con el teclado");
