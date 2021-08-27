@@ -21,12 +21,12 @@ export default function userDeviceInfo(id) {
       }
     },
     isBrowser = {
-      chrome: ua.match(/chrome/i),
-      safari: ua.match(/safari/i),
-      firefox: ua.match(/firefox/i),
-      opera: ua.match(/opera||opera mini/i),
-      ie: ua.match(/msie||iemobile/i),
-      edge: ua.match(/edge/i),
+      chrome: () => ua.match(/chrome/i),
+      safari: ()=>ua.match(/safari/i),
+      firefox: ()=>ua.match(/firefox/i),
+      opera: ()=>ua.match(/opera||opera mini/i),
+      ie: ()=>ua.match(/msie||iemobile/i),
+      edge: ()=>ua.match(/edge/i),
       any: function() {
         return (this.chrome() || this.safari() || this.firefox() || this.opera() || this.ie() || this.edge)
       }
