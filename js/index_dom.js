@@ -8,6 +8,7 @@ import responsiveMedia from "./objeto_responsive.js";
 import responsiveTester from "./prueba_responsive.js";
 import userDeviceInfo from "./deteccion_dispositivo.js"
 import networkStatus from "./decteccion_red.js"
+import webCam from "./deteccion_webcam.js";
 
 const d = document;
 d.addEventListener("DOMContentLoaded", (e) => {
@@ -30,7 +31,8 @@ d.addEventListener("DOMContentLoaded", (e) => {
 		`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254508.3928103627!2d-74.24789180268826!3d4.648625933059621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bfd2da6cb29%3A0x239d635520a33914!2zQm9nb3TDoQ!5e0!3m2!1ses!2sco!4v1629924381591!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`,
 	);
   responsiveTester("responsive-tester");
-  userDeviceInfo("user-device");
+	userDeviceInfo("user-device");
+	webCam("webcam")
 });
 
 d.addEventListener("keydown", (e) => {
