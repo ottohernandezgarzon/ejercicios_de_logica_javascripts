@@ -194,7 +194,7 @@ img {
 /************************* Network Status *************************/
 
 .online,
-.offine{
+.offline{
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -206,6 +206,6 @@ img {
   color: #fff;
 }
 
-.offine{
-  bgc:#b71c1c
+.offline{
+  background-color: #b71c1c;
 }
