@@ -20,6 +20,7 @@ export default function slider() {
 		if (e.target === $nextBtn) {
 			e.preventDefault();
 			$slides[i].classList.remove("active");
+			js;
 			i++;
 
 			if (i >= $slides.length) {
