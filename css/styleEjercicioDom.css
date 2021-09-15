@@ -349,3 +349,10 @@ img {
     left: calc(4.25rem + 1vw);
   }
 }
+
+/************************* ScrollSpy *************************/
+
+.cover-video{
+  width: 70%;
+  height: 80%;
+}
