@@ -15,6 +15,7 @@ import draw from "./sorteo.js";
 import slider from "./carrusul.js";
 import ScrollSpy from "./scroll_espia.js";
 import smartVideo from "./video_inteligente.js";
+import contactFormValidations from "./validaciones_formularios.js";
 
 const d = document;
 d.addEventListener("DOMContentLoaded", (e) => {
@@ -45,6 +46,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
 	slider();
 	ScrollSpy();
 	smartVideo();
+	contactFormValidations();
 });
 
 d.addEventListener("keydown", (e) => {

@@ -10,11 +10,12 @@ export default function webCam(id) {
         $video.play();
       })
       .catch((err) => {
-        $video.insertAdjacentHTML("afterend",
-        `<p>
-          <mark>${err}</mark>
-        </p>`)
-        console.log(`Sucedió el siguiente error!: ${err}`);
+        $video.insertAdjacentHTML(
+					"afterend",
+					`<p>
+          <mark>!Sucedió el siguiente error!:${err.message}</mark>
+        </p>`,
+				);
       })
   } 
 }
